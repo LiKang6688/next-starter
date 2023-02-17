@@ -13,3 +13,4 @@ yarn.lock
 .svg
 .eslintcache
 public/mockServiceWorker.js
+.next

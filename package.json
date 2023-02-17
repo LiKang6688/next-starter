@@ -7,12 +7,12 @@
   },
   "author": "Li Kang <kkllpaul7766@gmail.com>",
   "scripts": {
-    "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint --no-cache",
+    "dev": "next dev",
     "format:check": "prettier --check . --ignore-unknown",
     "format:write": "prettier --write . --ignore-unknown",
+    "lint": "next lint --no-cache",
+    "start": "next start",
     "types:check": "tsc",
     "validate": "pnpm format:check & pnpm lint & pnpm tsc:check & pnpm test"
   },
@@ -27,7 +27,6 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "typescript": "4.9.5",
     "@next/font": "13.1.6",
     "@types/node": "18.13.0",
     "@types/react": "18.0.28",
@@ -35,10 +34,11 @@
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
     "eslint-config-prettier": "8.6.0",
+    "msw": "1.0.1",
     "prettier": "2.8.4",
     "prettier-plugin-organize-imports": "3.2.2",
     "prettier-plugin-packagejson": "2.4.3",
-    "msw": "1.0.1"
+    "typescript": "4.9.5"
   },
   "engines": {
     "node": ">=18.11.0",
