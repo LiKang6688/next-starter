@@ -7,6 +7,7 @@
   },
   "author": "Li Kang <kkllpaul7766@gmail.com>",
   "scripts": {
+    "analyze": "ANALYZE=true next build",
     "build": "next build",
     "dev": "next dev",
     "format:check": "prettier --check . --ignore-unknown",
@@ -28,10 +29,12 @@
     "@next/font": "13.1.6",
     "@tanstack/react-query": "4.24.9",
     "next": "13.1.6",
+    "next-seo": "5.15.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@next/bundle-analyzer": "13.1.6",
     "@playwright/test": "1.30.0",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "14.0.0",
