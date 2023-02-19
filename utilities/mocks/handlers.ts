@@ -13,7 +13,7 @@ export const handlers = [
       })
     );
   }),
-  rest.get("/reviews", (_req, res, ctx) => {
+  rest.get("https://my.backend/reviews", (_req, res, ctx) => {
     return res(
       ctx.json<Review[]>([
         {

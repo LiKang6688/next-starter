@@ -1,5 +1,5 @@
-import Image from "next/image";
 import Widget from "@/components/Widget";
+import Image from "next/image";
 
 function About() {
   return (
