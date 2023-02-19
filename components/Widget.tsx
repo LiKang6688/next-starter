@@ -8,7 +8,7 @@ function Widget({ pageName }: { pageName: string }) {
     return (
       <>
         <Head>
-          <title key="htmlTitle"> You're browsing the {pageName} page</title>
+          <title key="htmlTitle"> You are browsing the {pageName} page</title>
         </Head>
 
         <div>
