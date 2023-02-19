@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import ThemeContext, { Theme } from "@/components/themeContext";
 import "@/styles/globals.css";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import type { AppProps } from "next/app";
 import { useState } from "react";
 
@@ -24,19 +25,22 @@ export default function App({ Component, pageProps }: AppProps) {
   const toggleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };
+  const queryClient = new QueryClient();
 
   return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <div
-        style={{
-          width: "100%",
-          minHeight: "100vh",
-          ...themes[theme],
-        }}
-      >
-        <Navbar />
-        <Component {...pageProps} />;
-      </div>
-    </ThemeContext.Provider>
+    <QueryClientProvider client={queryClient}>
+      <ThemeContext.Provider value={{ theme, toggleTheme }}>
+        <div
+          style={{
+            width: "100%",
+            minHeight: "100vh",
+            ...themes[theme],
+          }}
+        >
+          <Navbar />
+          <Component {...pageProps} />;
+        </div>
+      </ThemeContext.Provider>
+    </QueryClientProvider>
   );
 }
