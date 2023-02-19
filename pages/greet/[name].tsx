@@ -1,17 +1,18 @@
+import { GetServerSideProps } from "next";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
-export async function getServerSideProps({ params }) {
-  const { name } = params;
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  const params = context.params;
 
   return {
     props: {
-      name,
+      name: params?.name,
     },
   };
-}
+};
 
-function Greet(props) {
+function Greet({ name }: { name: string }) {
   const { query } = useRouter();
 
   console.log(query);
@@ -19,7 +20,7 @@ function Greet(props) {
   return (
     <>
       <h1>Hello {query.name}!</h1>
-      <h1> Hello, {props.name}! </h1>
+      <h1> Hello, {name}! </h1>
       <Link href="/about" prefetch={false}>
         Home
       </Link>

@@ -1,5 +1,5 @@
 import Navbar from "@/components/Navbar";
-import ThemeContext, { Theme } from "@/components/themeContext";
+import ThemeContext, { Theme } from "@/lib/themeContext";
 import "@/styles/globals.css";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import type { AppProps } from "next/app";

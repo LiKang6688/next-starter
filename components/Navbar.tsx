@@ -1,4 +1,4 @@
-import themeContext from "@/components/themeContext";
+import themeContext from "@/lib/themeContext";
 import Link from "next/link";
 import { useContext } from "react";
 
@@ -20,7 +20,7 @@ function Navbar() {
       <div>
         <Link href="/">Home </Link>
         <Link href="/about">About </Link>
-        <Link href="/contacts">Contacts </Link>
+        <Link href="/book">Book </Link>
         <button onClick={toggleTheme}>Set {newThemeName} theme</button>
       </div>
     </div>

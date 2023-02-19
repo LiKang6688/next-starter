@@ -4,7 +4,7 @@ import Image from "next/image";
 function About() {
   return (
     <>
-      <h1>Hello</h1>
+      <h1>About Page</h1>
       <Image
         src="https://images.unsplash.com/photo-1605460375648-278bcbd579a6"
         width={500}
