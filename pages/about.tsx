@@ -1,6 +1,11 @@
-import Widget from "@/components/Widget";
 import { NextSeo } from "next-seo";
+// import dynamic from "next/dynamic";
+import Widget from "@/components/Widget";
 import Image from "next/image";
+
+// const Widget = dynamic(() => import("@/components/Widget"), {
+//   ssr: false,
+// });
 
 function About() {
   return (
